@@ -9,7 +9,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public class RedisSessionManager {
 //    private static HashMap<String, Session> sessions = new HashMap<>();
-    JedisPool jedisPool = new JedisPool(new JedisPoolConfig(), "::1", 6379);
+    JedisPool jedisPool = new JedisPool(new JedisPoolConfig(), "localhost", 6379);
     Jedis jedis = jedisPool.getResource();
 
     public  Session createSession(String username, int expirationTime) {
