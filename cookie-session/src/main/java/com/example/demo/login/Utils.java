@@ -10,6 +10,7 @@ public class Utils {
         users.put("user2","pass2");
         users.put("manager1","manager1");
         users.put("manager2","manager2");
+        users.put("圆规","hello");
         if (users.get(username)!=null &&users.get(username).equals(password)){
             return true;
         }

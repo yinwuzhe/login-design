@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 明文的user,cookie设置
+ */
 @RestController
 public class Login2Controller {
 
@@ -38,9 +41,6 @@ public class Login2Controller {
         return "";
     }
 
-
-
-
     @PostMapping("/login2")
     public void login(@RequestParam String username, @RequestParam String password,
             HttpServletResponse response) throws IOException {
@@ -48,7 +48,7 @@ public class Login2Controller {
         if(Utils.authenticate(username,password)) {
             // Login successful, set cookie
             Cookie cookie = new Cookie("user", username);
-            cookie.setMaxAge(20); // 1 hour
+            cookie.setMaxAge(36000); // 过期时间1小时
             cookie.setPath("/admin");
             response.addCookie(cookie);
             // Redirect to original program with 302 status code
