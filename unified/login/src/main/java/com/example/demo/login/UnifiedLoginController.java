@@ -31,7 +31,6 @@ public class UnifiedLoginController {
             cookie.setMaxAge(3600); // 1 hour
             cookie.setDomain(domain);
             response.addCookie(cookie);
-//            response.sendRedirect("/redisSession");
             response.sendRedirect(url);
         } else {
             response.getWriter().println("Invalid username or password");
