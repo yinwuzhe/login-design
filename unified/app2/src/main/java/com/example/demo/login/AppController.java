@@ -27,6 +27,7 @@ public class AppController {
     String loginUrl;
 
 
+
     @RequestMapping("/")
     public String home(HttpServletRequest request,HttpServletResponse response) throws IOException {
 
@@ -45,7 +46,7 @@ public class AppController {
         } else {
             String username = sessionManager.getSession(mysession).getUsername();
             System.out.println("username = " + username);
-            return String.format(Utils.welcome,"App1 欢迎你， " + username);
+            return String.format(Utils.welcome,"App2 欢迎你， " + username);
         }
         return "";
     }

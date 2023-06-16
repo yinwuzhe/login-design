@@ -3,12 +3,14 @@ package com.example.demo.login;
 import java.util.HashMap;
 
 public class Utils {
-
     public static String welcome="<!DOCTYPE html>\n"
             + "<html>\n"
+            +"<style>\n"
+            + "</style>\n"
             + "<body>\n"
             + "    <p>%s</p>\n"
-            + "    <iframe src=\"https://yuangui.info/\" frameborder=\"0\" width=\"1000\" height=\"400\"></iframe>\n"
+            + "    <iframe src=\"https://juejin.cn/book/7209116225988165667/section/7220039574544711691\" frameborder=\"0\""
+            + " height=\"1000\" width=\"1000\"></iframe>\n"
             + "</body>\n"
             + "</html>";
     public static boolean authenticate(String username, String password) {
