@@ -37,28 +37,7 @@ public class UnifiedLoginController {
         }
     }
 
-//    @RequestMapping("/redisSession")
-//    public String home(HttpServletRequest request,HttpServletResponse response) throws IOException {
-//
-//        Map<String, String> cookieMap = new HashMap<>();
-//        Cookie[] cookies = request.getCookies();
-//        if (cookies != null) {
-//            for (Cookie cookie : cookies) {
-//                cookieMap.put(cookie.getName(), cookie.getValue());
-//            }
-//        }
-//        String mysession = cookieMap.get("session_id");
-//
-//
-//        if ( mysession== null) {
-//            response.sendRedirect("/login4.html");
-//        } else {
-//            String username = sessionManager.getSession(mysession).getUsername();
-//            System.out.println("username = " + username);
-//            return "Hello " + username;
-//        }
-//        return "";
-//    }
+
 
 
 

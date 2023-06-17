@@ -19,10 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppController {
     RedisSessionManager sessionManager=new RedisSessionManager();
-    @Value("${auth.domain:/}")
-    String domain;
-    @Value("${server.port}")
-    Integer port;
+    @Value("${app.home:/}")
+    String home;
+
     @Value("${auth.loginUrl:/}")
     String loginUrl;
 
@@ -42,7 +41,7 @@ public class AppController {
 
 
         if ( mysession== null) {
-            response.sendRedirect(loginUrl+"?from=http://"+domain+":"+port+"/");
+            response.sendRedirect(loginUrl+"?from="+home);
         } else {
             String username = sessionManager.getSession(mysession).getUsername();
             System.out.println("username = " + username);
