@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 //确保redis server能连接的时候再打开这个注解
 @RestController
 public class UnifiedLoginController {
-    RedisSessionManager sessionManager=new RedisSessionManager();
     @Value("${auth.domain:/}")
     String domain;
 
