@@ -1,0 +1,4 @@
+
+#server.address: 240e:3b2:32d1:94c0:d9f7:263a:7b35:14a8
+server.port: 7090
+auth.domain: localhost
