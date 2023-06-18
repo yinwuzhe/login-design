@@ -1,5 +1,5 @@
 
 #server.address: 240e:3b2:32d1:94c0:d9f7:263a:7b35:14a8
 server.port: 7080
-app.home: http://app1.yuangui.info/
-auth.loginUrl: http://login.yuangui.info/login.html
+app.home: http://jwt-app1.yuangui.info/
+auth.loginUrl: http://jwt-login.yuangui.info/login.html

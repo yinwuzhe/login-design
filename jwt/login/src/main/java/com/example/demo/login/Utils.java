@@ -32,11 +32,11 @@ public class Utils {
 
         keys.put("localhost:7080","key1");
         keys.put("app1.yuangui.info","key1");
-        keys.put("jwt_app1.yuangui.info","key1");
+        keys.put("jwt-app1.yuangui.info","key1");
 
         keys.put("localhost:7070","key1");
         keys.put("app2.yuangui.info","key1");
-        keys.put("jwt_app2.yuangui.info","key1");
+        keys.put("jwt-app2.yuangui.info","key1");
 
         return keys.get(domain);
 
