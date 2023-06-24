@@ -3,6 +3,11 @@ package com.example.demo.login;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.spec.X509EncodedKeySpec;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,8 +68,13 @@ public class AppController {
 
     private String decodeToken(String token, String userName) {
         try {
+            byte[] publicKeyBytes = Files.readAllBytes(Paths.get("/Users/ywz/login-design/jwt/publicKeyFile"));
+            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicKeyBytes);
+            KeyFactory keyFactory = KeyFactory.getInstance("EC");
+            PublicKey publicKey = keyFactory.generatePublic(keySpec);
             Claims claims = Jwts.parser()
-                    .setSigningKey(SECRET_KEY)
+//                    .setSigningKey(SECRET_KEY)
+                    .setSigningKey(publicKey)
                     .parseClaimsJws(token)
                     .getBody();
 
